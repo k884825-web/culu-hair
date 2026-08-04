@@ -79,6 +79,39 @@ img {
   height: auto;
 }
 
+/* ---------- Intro (SEO用の補足テキスト) ---------- */
+/* ヒーロー画像に焼き込まれた文言と同内容を、検索エンジン・AI検索が
+   読み取れる実テキストとして小さく補足。主役はあくまでヒーロー画像 */
+
+.intro {
+  padding: var(--space-lg) var(--space-md);
+}
+
+.intro__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro__eyebrow {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-serif);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.intro__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+}
+
+.intro__text + .intro__text {
+  margin-top: var(--space-sm);
+}
+
 /* ---------- Stylist cards ---------- */
 
 .stylists {
