@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>culu hair | culu share salon（三重県伊勢市）</title>
+<meta name="description" content="三重県伊勢市のシェアサロン culu hair（culu share salon）。担当スタイリストを選んでご予約いただけます。シェアサロンをお探しの美容師様のご案内もこちらから。">
+
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="culu hair | culu share salon">
+<meta property="og:description" content="三重県伊勢市のシェアサロンです。担当スタイリストを選んでご予約ください。">
+<meta property="og:site_name" content="culu hair">
+<meta property="og:image" content="images/ogp.jpg">
+<!-- 公開後、実際のURLに差し替えてください -->
+<meta property="og:url" content="https://example.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <p class="site-header__sub">culu share salon</p>
+  <h1 class="site-header__logo">culu hair</h1>
+</header>
+
+<main>
+
+  <!-- ヒーロー画像。文字・オーバーレイはすべて images/salon-interior.jpg 側に
+       焼き込み済みのデザイン完成画像のため、HTML/CSS側では文字を重ねていません。
+       画像を差し替える場合は、同じく文字入り済みの画像をご用意ください -->
+  <section class="hero">
+    <img
+      class="hero__img"
+      src="images/salon-interior.jpg"
+      alt="culu hair 三重県伊勢市のプライベートヘアサロン。担当スタイリストを選び、Instagramよりご予約ください。"
+      fetchpriority="high">
+  </section>
+
+  <section class="stylists" aria-label="スタイリスト一覧">
+
+    <!-- STYLIST CARD: yusaku ここから -->
+    <article class="stylist-card">
+      <div class="stylist-card__photo stylist-card__photo--yusaku">
+        <span class="stylist-card__initial">Y</span>
+        <img
+          class="stylist-card__img"
+          src="images/stylists/yusaku.jpg"
+          alt="yusaku"
+          loading="lazy"
+          onerror="this.style.display='none'">
+      </div>
+      <p class="stylist-card__name-sub">岩山ゆうさく</p>
+      <h2 class="stylist-card__name">yusaku</h2>
+      <a class="btn btn--primary" href="https://www.instagram.com/108bars?igsh=MWhtOWRhZTA2bzlrOQ==" target="_blank" rel="noopener">
+        Instagram・ご予約はこちら
+      </a>
+    </article>
+    <!-- STYLIST CARD: yusaku ここまで -->
+
+    <!-- STYLIST CARD: mayu ここから -->
+    <article class="stylist-card">
+      <div class="stylist-card__photo stylist-card__photo--mayu">
+        <span class="stylist-card__initial">M</span>
+        <img
+          class="stylist-card__img"
+          src="images/stylists/mayu.jpg"
+          alt="mayu"
+          loading="lazy"
+          onerror="this.style.display='none'">
+      </div>
+      <p class="stylist-card__name-sub">浜口まゆ</p>
+      <h2 class="stylist-card__name">mayu</h2>
+      <a class="btn btn--primary" href="https://www.instagram.com/mayuhair_?igsh=MWZkc2UzMTZ6dXh5NQ==" target="_blank" rel="noopener">
+        Instagram・ご予約はこちら
+      </a>
+    </article>
+    <!-- STYLIST CARD: mayu ここまで -->
+
+    <!-- 新しいスタイリストを追加する場合は、上のカード1つをまるごと複製して
+         クラス名（--yusaku 等）・イニシャル・名前・画像ファイル名・リンク先を書き換えてください -->
+
+  </section>
+
+  <section class="recruit">
+    <div class="recruit__inner">
+      <h2 class="recruit__title">
+        シェアサロンという働き方に<br>興味のある美容師の方へ。
+      </h2>
+      <p class="recruit__text">
+        culu share salonでは、<br>
+        見学やご相談を随時受け付けています。
+      </p>
+      <p class="recruit__text">
+        まずはお気軽にご覧ください。
+      </p>
+      <a class="btn btn--outline" href="https://fanciful-sunflower-1c37c1.netlify.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleATeiWhwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp-HHCpjtWmXpbH_0WgJTHph6lQVMY53N3VYqwHDcTrUXZmahrFwYKjUAWMEt_aem_8ne1-uGSASkMd8SBHRyaRw" target="_blank" rel="noopener">
+        シェアサロンについて詳しく見る
+      </a>
+    </div>
+  </section>
+
+  <!-- 今後追加予定のセクション（今回は未実装）
+       店舗紹介 / アクセス / メニュー / スタイルギャラリー / ブログ / Google口コミ / 会社紹介
+       追加する際は、このコメントの位置に <section> を新設してください -->
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 culu hair</p>
+</footer>
+
+</body>
+</html>

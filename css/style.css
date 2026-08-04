@@ -1,0 +1,224 @@
+/* =========================================================
+   culu hair — base styles
+   フォントは外部読み込みなし（表示速度優先）。
+   OS標準の明朝/ゴシックのみで構成しています。
+   ========================================================= */
+
+:root {
+  --font-serif: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif;
+  --font-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "YuGothic", sans-serif;
+
+  --color-bg: #F5F2ED;
+  --color-bg-alt: #EAE3D8;
+  --color-text: #2B2926;
+  --color-text-muted: #6B6459;
+  --color-line: #DEd5C6;
+  --color-cta-bg: #2B2926;
+  --color-cta-text: #F5F2ED;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 56px;
+  --space-xl: 88px;
+
+  --content-max: 480px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm) var(--space-md);
+}
+
+.site-header__sub {
+  margin: 0 0 var(--space-xs);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+  text-transform: none;
+}
+
+.site-header__logo {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.12em;
+}
+
+/* ---------- Hero ---------- */
+/* images/salon-interior.jpg は文字・オーバーレイ込みで書き出し済みの
+   完成画像のため、横幅いっぱいに原寸比率のまま表示するのみ（トリミングなし） */
+
+.hero__img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Stylist cards ---------- */
+
+.stylists {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+.stylist-card {
+  text-align: center;
+}
+
+.stylist-card__photo {
+  position: relative;
+  width: 148px;
+  height: 148px;
+  margin: 0 auto var(--space-sm);
+  border-radius: 50%;
+  background-color: var(--color-bg-alt);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stylist-card__initial {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  color: var(--color-text-muted);
+}
+
+.stylist-card__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stylist-card__name-sub {
+  margin: 0 0 2px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.stylist-card__name {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  min-height: 52px;
+  line-height: 52px;
+  padding: 0 var(--space-sm);
+  border-radius: 2px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+
+.btn--primary {
+  background: var(--color-cta-bg);
+  color: var(--color-cta-text);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+}
+
+/* ---------- Recruit section ---------- */
+
+.recruit {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-line);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.recruit__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.recruit__title {
+  margin: 0 0 var(--space-sm);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 0.04em;
+}
+
+.recruit__text {
+  margin: 0 0 var(--space-md);
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Tablet and up ---------- */
+
+@media (min-width: 640px) {
+  .site-header__logo {
+    font-size: 40px;
+  }
+
+  .stylists {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg) var(--space-md);
+  }
+}
